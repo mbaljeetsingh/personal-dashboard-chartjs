@@ -1,4 +1,2 @@
-.sidebar
-{
-	position:fixed;
-}
+@charset "utf-8";
+.container .row.main-features .span6 .well img { float: left; padding: 5px; }
