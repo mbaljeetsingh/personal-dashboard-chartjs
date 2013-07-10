@@ -14,7 +14,13 @@
   </head>
   
   <body>
+    <script>
+  $(document).ready(function(e) {
+    $('body').hide().fadeIn(3000);
+	//$('body').hide().toggle(3000);
+});
   
+  </script>
 
     
     <div class="container">
@@ -24,65 +30,109 @@
           <div class="well">
             <h3>About Me</h3>
             <img src="images/Baljeet.jpg">
-            <p >I am computer engineer from india & freelance web programmer. What i do (#OpenSource @Github/sandhus. #Windows #Techie #Android #Blogger #AlwaysCurious #CSE #Programmer #Web2.0)</p>
-            <p style="alignment-adjust:central"> <a href="http://facebook.com/bsinghs">FB</a> <a href="http://twitter.com/tenthgeek">TW</a> <a href="http://github.com/sandhus">Git</a></p>
+            <p >My name is <b><i>Baljeet Singh<i></b>. Currently I am pursuing computer engineering from Guru nanak dev engineering college, ludhiana, punjab, india. Previously Completed my diploma course of computer engineering from Guru nanak dev polytechnic college. </p>
+            <p>What i do (#OpenSource @Github/sandhus. #Windows #Techie #Android #Blogger #AlwaysCurious #CSE #Programmer #Web2.0). I am freelance web programmer @tenthgeek.</p>
+            <blockquote> I seak of my mind, I never mind what i speak</blockquote>
+            <blockquote> I am victim of my own mind.</blockquote>
+            <p class="pull-right" style="alignment-adjust:central"> <a href="http://facebook.com/bsinghs">FB</a> <a href="http://twitter.com/tenthgeek">TW</a> <a href="http://github.com/sandhus">Git</a></p>
           </div>
         </div>
         <div class="span6">
           <div class="well" autocomplete="off">
-            <h3>Expertise</h3>
-            <p>
-              <b>Vocabulary</b> 
-            </p>
-            <p></p>
-            <p>
-              <b>Pronunciation</b> 
-            </p>
-            <p>
-              <b>Reading</b> 
-            </p>
-            <p>
-              <b>Writing</b> 
-            </p>
-            <p>
-              <b>Listening</b> 
-            </p>
-            <p>
-              <b>Speaking</b>
-              <br> 
-            </p>
-          </div>
+          <h3>Expertise</h3>
+          
+          <canvas id="Expertise" height="250" width="550"></canvas>
+
+
+	<script>
+
+		var barChartData = {
+			labels : ["Vocabulary","Pronunciation","Reading","Writing","Listening","Speaking"],
+			datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					data : [70,25,90,85,80,40]
+				},
+/*				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					data : [28,48,40,19,96,27]
+				}*/
+			]
+			
+		}
+
+	var myLine = new Chart(document.getElementById("Expertise").getContext("2d")).Bar(barChartData);
+	
+	</script></div>
         </div>
         <div class="span6">
           <div class="well" autocomplete="off">
-            <h3>Education</h3>
-            <p>
-              <b>Vocabulary</b> 
-            </p>
-            <p></p>
-            <p>
-              <b>Pronunciation</b> 
-            </p>
-            <p>
-              <b>Reading</b> 
-            </p>
-            <p>
-              <b>Writing</b> 
-            </p>
-            <p>
-              <b>Listening</b> 
-            </p>
-            <p>
-              <b>Speaking</b>
-              <br> 
-            </p>
+            <h3>Day to day Life</h3>
+            <canvas id="DTDL" height="350" width="450"></canvas>
+
+
+	<script>
+
+		var radarChartData = {
+			labels : ["Eating","Gaming","Sleeping","Running","Coding","Partying","Designing"],
+			datasets : [
+				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					data : [65,59,90,81,56,55,40]
+				},
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					data : [28,48,40,19,96,27,100]
+				}
+			]
+			
+		}
+
+	var myRadar = new Chart(document.getElementById("DTDL").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+	
+	</script>
           </div>
         </div>
         <div class="span6">
           <div class="well" autocomplete="off">
             <h3>Programming Languages</h3>
-            <h3></h3>
-            <p></p>
+            <canvas id="pl" height="350" width="550"></canvas>
+
+
+	<script>
+
+		var lineChartData = {
+			labels : ["HTML","CSS","Javascript","Jquery","php","Java",],
+			datasets : [
+/*				{
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					data : [65,59,90,81,56,55,40]
+				},*/
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					data : [90,80,30,65,60,70]
+				}
+			]
+			
+		}
+
+	var myLine = new Chart(document.getElementById("pl").getContext("2d")).Line(lineChartData);
+	
+	</script>
           </div>
         </div>
       </div>
